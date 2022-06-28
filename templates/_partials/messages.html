@@ -1,0 +1,13 @@
+{% if messages %}
+
+{% for message in messages %}
+
+<!--подрбоная инфа - https://docs.djangoproject.com/en/4.0/ref/contrib/messages/-->
+    <div class="ui message {{message.tags}}">
+        {{message}}
+
+
+    </div>
+{% endfor %}
+
+{% endif %}

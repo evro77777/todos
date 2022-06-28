@@ -1,0 +1,14 @@
+{% extends '_partials/base.html'%}
+{% block title%}
+ Todo edit:{{todo.title}}
+{% endblock %}
+
+{% block content %}
+    <h2>edit todo</h2>
+    <form action="{% url 'todo_edit' todo.id  %}" class="ui form" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="ui button primary" value="Save">
+    </form>
+
+{% endblock content%}
